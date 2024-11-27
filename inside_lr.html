@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>제너러티브II 기록과 선택</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+        <style>
+            @font-face {
+            font-family: 'regular';
+            src: url('Regular.otf') format('opentype');
+            }
+
+            body {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                overflow: hidden;
+                font-family: "regular";
+            }
+            h2 {
+                margin: 0;
+            }
+            #name {
+                margin-bottom: 10%;
+            }
+            #description {
+                width: 60%;
+                word-break: keep-all;
+                line-height: 1.7;
+                text-align: center;
+            }
+
+            #link {
+            margin: 0;
+            padding: 0;
+            position: fixed;
+            top: 0%;
+            left:1.5%;
+            font-size: 20px;
+            }
+
+
+            #left, #right {
+                height: 100vh; /* 화면 전체 높이 */
+                transition: width 0.5s ease; /* 너비 변화 트랜지션 효과 */
+            }
+            #left {
+                margin: 0;
+                width: 50%;
+                background-color: white;
+                border: 1px solid black;
+                cursor: pointer; /* 클릭 가능 커서 */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;    
+            }
+            #right {
+                width: 50%;
+                background-color: black;
+                color: white;
+                cursor: pointer; /* 클릭 가능 커서 */
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+    
+            }
+            #left.expanded {
+                padding: 5px;
+                width: 5%; /* 클릭 시 확장될 너비 */
+                white-space: pre;
+                overflow: auto;     
+            }
+            #right.expanded {
+                width: 95%; /* 클릭 시 축소될 너비 */
+            }
+            .iframe-container {
+                width: 90%;
+                height: 0;
+                padding-top: 56.25%;  /* 16:9 비율 */
+                position: relative; /* 상대 위치 */
+                scollbar
+            }
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%; /* 자식 요소가 iframe의 크기를 채우도록 설정 */
+
+            }
+            iframe::-webkit-scrollbar {
+             display: none;
+        </style>
+    </head>
+    <body>
+        <a href="iii.html" id="link"><p>← 기록과 선택</p></a>
+        <span id="left">
+            <h2>Warm.Word.Wad.Web</h2>
+             <p id="subtitle">따뜻한 단어 뭉치 웹</p>
+            <p id="name">이 레</p>
+            <p id="description">기존에 보유한 기록물 중 일부 선택된 언어들이 시각적으로 구현된 것을 모은 아카이브 웹사이트다. 소중한 인연으로부터 받은 3개의 편지 중 선택된 일곱 가지의 단어뭉치가 다양한 방식으로 해석된 형태를 볼 수 있다.</p>
+        </span>
+        <span id="right">
+            <div class="iframe-container">
+                <iframe src="https://floweroneri.github.io/Warm.Word.Wad.Web/" frameborder="0"></iframe>
+            </div>
+        </span>
+       <script>
+            const right = document.getElementById("right");
+            const left = document.getElementById("left");
+
+            right.addEventListener("click", () => {
+                // 클릭 시 클래스 추가/제거
+                left.classList.toggle("expanded");
+                right.classList.toggle("expanded");
+
+                // #right가 expanded일 때 #left의 텍스트 색상 변경
+                if (right.classList.contains("expanded")) {
+                    left.querySelectorAll("p, h2").forEach(element => {
+                        element.style.color = "#ffffff"; // 흰색으로 변경
+                    });
+                } else {
+                    left.querySelectorAll("p, h2").forEach(element => {
+                        element.style.color = "black"; // 기본 색상으로 돌아감
+                    });
+                }
+            });
+        </script>
+    </body>
+</html>
+
+
+

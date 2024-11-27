@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>제너러티브II 기록과 선택</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+        <style>
+            @font-face {
+                font-family: 'regular';
+                src: url('Regular.otf') format('opentype');
+            }            
+            body {
+                margin: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100vh; /* 전체 화면 정렬 */
+                background-color: #ffffff;
+                transition: background-color 0.3s ease; /* 배경색 전환 */
+            }
+            .motion {
+                transition: transform 0.2s ease, background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+                font-size: 1.2vw; /* 반응형 폰트 크기 */
+                line-height: 1.5;
+                position: relative;
+                opacity: 1; /* 기본적으로 요소가 보이는 상태 */
+            }
+            #circle {
+                border-radius: 50%; /* 원형 스타일 */
+            }
+            .name {
+                margin-bottom:10%;
+            }
+            /* 테이블 스타일 */
+            table {
+                border-collapse: separate;
+                border-spacing: 10px;
+                width: 100%; /* 테이블 전체 크기 */
+                height: auto; /* 자동 높이 */
+                table-layout: fixed; /* 셀 크기 고정 */
+            }
+
+            /* 정사각형 셀 스타일 */
+            td {
+                position: relative; /* 내부 요소 배치에 필요 */
+                width: 20%; /* 셀의 너비 비율 */
+                padding-bottom: 18.5%; /* 너비 대비 높이 비율을 설정 (정사각형 유지) */
+                text-align: center; /* 텍스트 중앙 정렬 */
+                background-color: #ffffff;
+                border: 1px solid black;
+                font-family: "regular";
+            }
+
+            /* 중앙 정렬을 위한 스타일 */
+            .cell-link {
+                position: absolute;
+                top: 50%; /* 부모 요소의 중앙 위치 */
+                left: 50%; /* 부모 요소의 중앙 위치 */
+                transform: translate(-50%, -50%); /* 중앙에 맞추기 */
+                text-decoration: none; /* 링크 밑줄 제거 */
+                color: inherit; /* 글자 색상 상속 */
+                display: flex;
+                justify-content: center; /* 가로 중앙 정렬 */
+                align-items: center; /* 세로 중앙 정렬 */
+                width: 100%; /* 부모 크기와 동일 */
+                height: 100%; /* 부모 크기와 동일 */
+            }
+
+            /* 텍스트 정렬 */
+            .cell-link span {
+                text-align: center; /* 텍스트 중앙 정렬 */
+                line-height: 1.5;
+            }
+
+            }
+            td > span {
+                font-size: 1.2vw; 
+                position: absolute; /* 부모 기준으로 위치 고정 */
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+            td.hidden {
+                opacity: 0; /* 숨겨지는 효과 */
+                pointer-events: none; /* 클릭 방지 */
+            }
+            .motion:hover {
+                color: #000000;
+                background-color: #ffffff; /* hover된 셀은 흰색 배경 */
+            }
+            td.always-visible {
+                opacity: 1 !important; /* 항상 보이도록 유지 */
+                pointer-events: auto; /* 상호작용 가능 */
+            }
+            /* 테이블과 셀 스타일 */
+
+
+
+        </style>
+    </head>
+    <body>
+                <table>
+            <tr>
+                <td class="motion always-visible" id="circle" data-group="group1 group2 group3 group4 group5">
+                    <a href="#" class="cell-link">
+                        <span>제너러티브<br>디자인 II</span>
+                    </a>
+                </td>
+                <td class="motion" data-group="group5">
+                    <a href="inside_ksj.html" class="cell-link">
+                        <span>김승주</span>
+                    </a>
+                </td>
+                <td class="motion" data-group="group1">
+                    <a href="inside_bhj.html" class="cell-link">
+                        <span>박현지</span>
+                    </a>
+                </td>
+                <td class="motion" data-group="group4">
+                    <a href="inside_sny.html" class="cell-link">
+                        <span>송나연</span>
+                    </a>
+                </td>
+                <td class="motion" data-group="group3">
+                    <a href="inside_ysb.html" class="cell-link">
+                        <span>양새봄</span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="motion" data-group="group2">
+                    <a href="inside_ohy.html" class="cell-link">
+                        <span>오현유</span>
+                    </a>
+                </td>
+                <td class="motion always-visible" id="circle" data-group="group1 group2 group3 group4 group5">
+                    <a href="" class="cell-link">
+                        <span>기록과 선택</span>
+                    </a>
+                </td>
+                <td class="motion" data-group="group1">
+                    <a href="inside_lr.html" class="cell-link">
+                        <span>
+                            <div class="name">이 레</div>
+                            Warm.Word.Wad.Web<br>따뜻한 단어뭉치 웹
+                        </span>
+                    </a>
+                </td>
+                <td class="motion" data-group="group5">
+                    <a href="inside_jsa.html" class="cell-link">
+                        <span>정세아</span>
+                    </a>
+                </td>
+                <td class="motion" data-group="group3">
+                    <a href="inside_jks.html" class="cell-link">
+                        <span>조경서</span>
+                    </a>
+                </td>
+            </tr>
+            <tr>
+                <td class="motion" data-group="group4">
+                    <a href="inside_cjy.html" class="cell-link">
+                        <span>차정연</span>
+                    </a>
+                </td>
+                <td class="motion" data-group="group3">
+                    <a href="inside_cms.html" class="cell-link">
+                        <span>최문선</span>
+                    </a>
+                </td>
+                <td class="motion" data-group="group2">
+                    <a href="inside_cyj.html" class="cell-link">
+                        <span>최영준</span>
+                    </a>
+                </td>
+                <td class="motion" data-group="group4">
+                    <a href="inside_cyy.html" class="cell-link">
+                        <span>최이안</span>
+                    </a>
+                </td>
+                <td class="motion" data-group="group5">
+                    <a href="inside_jsy.html" class="cell-link">
+                        <span>지선율</span>
+                    </a>
+                </td>
+            </tr>
+        </table>
+        <script>
+        const cells = document.querySelectorAll("td");
+
+        function handleHover(event) {
+            // body의 배경색을 검정으로 변경
+            document.body.style.backgroundColor = '#000000';
+
+            // 모든 셀 숨기기
+            cells.forEach(cell => {
+                cell.classList.add("hidden"); // 모든 셀을 숨김
+                cell.style.backgroundColor = ""; // 배경색 초기화
+            });
+
+            // 현재 hover된 셀의 group을 확인
+            const hoveredCell = event.target;
+            const groups = hoveredCell.getAttribute('data-group')?.split(' '); // 다중 그룹 처리
+
+            if (groups) {
+                // 속한 그룹에 맞는 셀은 숨기지 않음
+                groups.forEach(group => {
+                    document.querySelectorAll(`[data-group~="${group}"]`).forEach(cell => {
+                        cell.classList.remove("hidden"); // 해당 그룹의 셀은 숨기지 않음
+                        cell.style.backgroundColor = "#ffffff"; // 배경색을 흰색으로
+                    });
+                });
+            }
+
+            // 현재 hover된 셀은 항상 표시
+            hoveredCell.classList.remove("hidden");
+        }
+
+        function resetVisibility() {
+            // body의 배경색을 원래대로 복원
+            document.body.style.backgroundColor = '#ffffff';
+
+            // 모든 셀 다시 표시
+            cells.forEach(cell => {
+                cell.classList.remove("hidden");
+                cell.style.backgroundColor = ""; // 배경색 초기화
+            });
+        }
+
+        // hover 이벤트 연결
+        cells.forEach(cell => {
+            cell.addEventListener("mouseenter", handleHover);
+            cell.addEventListener("mouseleave", resetVisibility);
+        });
+
+        document.body.addEventListener("mouseenter", function () {
+            document.body.style.backgroundColor = "#ffffff"; // body 배경색을 흰색으로
+        });
+
+
+        </script>   
+        <!-- <script>
+            // 커서 이미지 경로
+            const cursorImage = 'check.png'; // 커서 이미지의 경로
+
+            // Mousemove 이벤트를 이용해 커서 이미지 변경
+            document.body.addEventListener('mousemove', function(event) {
+                // 기존 커서 요소가 있으면 제거
+                const existingCursor = document.querySelector('.custom-cursor');
+                if (existingCursor) {
+                    existingCursor.remove();
+                }
+
+                // 새로운 커서 이미지 생성
+                const cursor = document.createElement('div');
+                cursor.style.position = 'absolute';
+                cursor.style.left = `${event.clientX - 16}px`; // 커서의 중심을 맞추기 위해 반으로 이동
+                cursor.style.top = `${event.clientY - 16}px`;  // 커서의 중심을 맞추기 위해 반으로 이동
+                cursor.style.width = '32px';  // 커서 이미지의 크기
+                cursor.style.height = '32px'; // 커서 이미지의 크기
+                cursor.style.backgroundImage = `url('${cursorImage}')`;
+                cursor.style.backgroundSize = 'contain';
+                cursor.style.pointerEvents = 'none';  // 클릭 이벤트 방지
+                cursor.style.zIndex = '9999'; // 다른 요소 위에 표시
+                cursor.classList.add('custom-cursor'); // 커서 클래스를 추가하여 나중에 쉽게 삭제 가능하게 함
+
+                // 새로운 커서를 화면에 추가
+                document.body.appendChild(cursor);
+            });
+
+            // 클릭 시 커서 이미지 제거
+            document.body.addEventListener('click', function() {
+                const existingCursor = document.querySelector('.custom-cursor');
+                if (existingCursor) {
+                    existingCursor.remove();
+                }
+            });
+        </script> -->
+    </body>
+</html>
