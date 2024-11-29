@@ -96,16 +96,29 @@
 
             }
             iframe::-webkit-scrollbar {
-             display: none;
+             display: none;}
+             
+            a {
+                text-decoration: none;
+                color: black;
+            }
+             ::selection {
+              background-color: #E7E7E7; /* 노란색 배경 */
+            }
+
+            /* 웹킷 브라우저 전용 선택자 */
+            ::-webkit-selection {
+              background-color: #E7E7E7;
+            }
         </style>
     </head>
     <body>
-        <a href="iii.html" id="link"><p>← 기록과 선택</p></a>
+        <a href="index.html" id="link"><p>← 기록과 선택</p></a>
         <span id="left">
-            <h2>Weather Basket</h2>
-             <p id="subtitle">날씨보관함</p>
+            <h2>날씨보관함</h2>
+             <!-- <p id="subtitle">날씨보관함</p> -->
             <p id="name">조경서</p>
-            <p id="description">귀여운 경서쨩의 웹 > <</p>
+            <p id="description"></p>
         </span>
         <span id="right">
             <div class="iframe-container">

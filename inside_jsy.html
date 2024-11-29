@@ -95,20 +95,34 @@
 
             }
             iframe::-webkit-scrollbar {
-             display: none;
+             display: none;}
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            ::selection {
+              background-color: #E7E7E7; /* 노란색 배경 */
+            }
+
+            /* 웹킷 브라우저 전용 선택자 */
+            ::-webkit-selection {
+              background-color: #E7E7E7;
+            }
         </style>
     </head>
     <body>
-        <a href="iii.html" id="link"><p>← 기록과 선택</p></a>
+        <a href="index.html" id="link"><p>← 기록과 선택</p></a>
         <span id="left">
-            <h2>영문명</h2>
-             <p id="subtitle">한글제목</p>
+            <h2>Sleepless night</h2>
+             <!-- <p id="subtitle">한글제목</p> -->
             <p id="name">지선율</p>
-            <p id="description">ㅇㅇㅇ</p>
+            <p id="description">잠에 들기 전 마구잡이로 떠오르는 생각들을 잠에 들기 위해 양을 세는 행위에 비유하여 잠에 드는 것을 돕기 위해 만들어진 웹사이트.<br><br>
+
+            화면을 클릭하면 양이 나타나고 이를 드래그하면 무작위의 생각들이 나타난다. 양 100마리를 전부 세어 잠에 드는 것을 목표로 한다.</p>
         </span>
         <span id="right">
             <div class="iframe-container">
-                <iframe src="https://johndecember.com" frameborder="0"></iframe>
+                <iframe src="https://eeejee.github.io/Sleepless-night/" frameborder="0"></iframe>
             </div>
         </span>
        <script>

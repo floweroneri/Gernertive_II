@@ -10,7 +10,7 @@
         <style>
             @font-face {
             font-family: 'regular';
-            src: url('regular.otf') format('opentype');
+            src: url('Regular.otf') format('opentype');
             }
 
             body {
@@ -96,20 +96,32 @@
 
             }
             iframe::-webkit-scrollbar {
-             display: none;
+             display: none;}
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            ::selection {
+              background-color: #E7E7E7; /* 노란색 배경 */
+            }
+
+            /* 웹킷 브라우저 전용 선택자 */
+            ::-webkit-selection {
+              background-color: #E7E7E7;
+            }
         </style>
     </head>
     <body>
-        <a href="iii.html" id="link"><p>← 기록과 선택</p></a>
+        <a href="index.html" id="link"><p>← 기록과 선택</p></a>
         <span id="left">
-            <h2>영문명</h2>
-             <p id="subtitle">한글제목</p>
+            <h2>Cha's Archive</h2>
+             <!-- <p id="subtitle">한글제목</p> -->
             <p id="name">차정연</p>
-            <p id="description">ㅇㅇㅇ</p>
+            <p id="description">이 사이트는 차정연이 소장한 물건들을 아카이빙한 공간이다. 각 물건은 실루엣으로 표시되며, 마우스를 올리면 이미지가 드러난다. 클릭하면 해당 물건에 대한 설명이 나오는데, 솔직히 말하자면 별로 도움이 되진 않을 것이다. 설명들은 지극히 주관적이며, 다소 당연하거나 때로는 엉뚱한 내용이 포함되어 있을 수 있다.</p>
         </span>
         <span id="right">
             <div class="iframe-container">
-                <iframe src="https://johndecember.com" frameborder="0"></iframe>
+                <iframe src="https://jeongyeoncha.github.io/cha2/" frameborder="0"></iframe>
             </div>
         </span>
        <script>

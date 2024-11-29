@@ -95,20 +95,33 @@
 
             }
             iframe::-webkit-scrollbar {
-             display: none;
+             display: none;}
+             
+            a {
+                text-decoration: none;
+                color: black;
+            }
+             ::selection {
+              background-color: #E7E7E7; /* 노란색 배경 */
+            }
+
+            /* 웹킷 브라우저 전용 선택자 */
+            ::-webkit-selection {
+              background-color: #E7E7E7;
+            }
         </style>
     </head>
     <body>
-        <a href="iii.html" id="link"><p>← 기록과 선택</p></a>
+        <a href="index.html" id="link"><p>← 기록과 선택</p></a>
         <span id="left">
-            <h2>영문명</h2>
-             <p id="subtitle">한글제목</p>
+            <h2>거짓말 생성기</h2>
+             <!-- <p id="subtitle">한글제목</p> -->
             <p id="name">정세아</p>
-            <p id="description">ㅇㅇㅇ</p>
+            <p id="description">입력란에 무작위의 단어를 입력하면 gpt가 허무맹랑한 이야기를 창작한다. 창작한 이야기는 다시 입력자에 의해서 재구성되며, 이야기라는 것이 얼마나 손쉽게 창작되며, 손쉽게 변질되는지를 알려주는 체험형 웹사이트이다.</p>
         </span>
         <span id="right">
             <div class="iframe-container">
-                <iframe src="https://johndecember.com" frameborder="0"></iframe>
+                <iframe src="http://seah1136.mycafe24.com" frameborder="0"></iframe>
             </div>
         </span>
        <script>

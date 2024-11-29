@@ -10,7 +10,7 @@
         <style>
             @font-face {
             font-family: 'regular';
-            src: url('regular.otf') format('opentype');
+            src: url('Regular.otf') format('opentype');
             }
 
             body {
@@ -101,11 +101,24 @@
 
             }
             iframe::-webkit-scrollbar {
-             display: none;
+             display: none;}
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            ::selection {
+              background-color: #E7E7E7; /* 노란색 배경 */
+            }
+
+            /* 웹킷 브라우저 전용 선택자 */
+            ::-webkit-selection {
+              background-color: #E7E7E7;
+            }            
         </style>
     </head>
     <body>
-        <a href="iii.html" id="link"><p>← 기록과 선택</p></a>
+        <a href="index.html" id="link"><p>← 기록과 선택</p></a>
         <span id="left">
             <h2>영문명</h2>
              <p id="subtitle">한글제목</p>

@@ -72,8 +72,6 @@
             }
             #left.expanded {
                 width: 5%; /* 클릭 시 확장될 너비 */
-                white-space: pre;
-                overflow: auto; 
             }
             #right.expanded {
                 width: 95%; /* 클릭 시 축소될 너비 */
@@ -95,56 +93,29 @@
 
             }
             iframe::-webkit-scrollbar {
-             display: none;}
-
-            a {
-                text-decoration: none;
-                color: black;
-            }
-            ::selection {
-              background-color: #E7E7E7; /* 노란색 배경 */
-            }
-
-            /* 웹킷 브라우저 전용 선택자 */
-            ::-webkit-selection {
-              background-color: #E7E7E7;
-            }
+             display: none;
         </style>
     </head>
     <body>
-        <a href="index.html" id="link"><p>← 기록과 선택</p></a>
+        <a href="iii.html" id="link"><p>← 기록과 선택</p></a>
         <span id="left">
-            <h2>DrawALife</h2>
-             <p id="subtitle">생명체 그리기</p>
-            <p id="name">송나연</p>
-            <p id="description">무엇이든 가능한 웹 공간 속에 새로운 생명을 그려낼 수 있다면, 무엇을 탄생 시키겠습니까?<br>
-            이 웹사이트에서는 당신의 선택으로 만들어지고, 지워지며 형성되는 웹 생명 군집을 한눈에 볼 수 있습니다.<br>
-            텅 빈 웹 공간에 새로운 생명을 그려 채워주세요.</p>
+            <h2>Warm.Word.Wad.Web</h2>
+             <p id="subtitle">따뜻한 단어 뭉치 웹</p>
+            <p id="name">이 레</p>
+            <p id="description">기존에 보유한 기록물 중 일부 선택된 언어들이 시각적으로 구현된 것을 모은 아카이브 웹사이트다. 소중한 인연으로부터 받은 3개의 편지 중 선택된 일곱 가지의 단어뭉치가 다양한 방식으로 해석된 형태를 볼 수 있다.</p>
         </span>
         <span id="right">
             <div class="iframe-container">
-                <iframe src="https://snyeon16.mycafe24.com/" frameborder="0"></iframe>
+                <iframe src="https://johndecember.com" frameborder="0"></iframe>
             </div>
         </span>
         <script>
             const right = document.getElementById("right");
-            const left = document.getElementById("left");
 
             right.addEventListener("click", () => {
                 // 클릭 시 클래스 추가/제거
                 left.classList.toggle("expanded");
                 right.classList.toggle("expanded");
-
-                // #right가 expanded일 때 #left의 텍스트 색상 변경
-                if (right.classList.contains("expanded")) {
-                    left.querySelectorAll("p, h2").forEach(element => {
-                        element.style.color = "#ffffff"; // 흰색으로 변경
-                    });
-                } else {
-                    left.querySelectorAll("p, h2").forEach(element => {
-                        element.style.color = "black"; // 기본 색상으로 돌아감
-                    });
-                }
             });
         </script>
     </body>

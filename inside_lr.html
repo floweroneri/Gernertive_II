@@ -95,14 +95,26 @@
 
             }
             iframe::-webkit-scrollbar {
-             display: none;
+             display: none;}
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            ::selection {
+              background-color: #E7E7E7; /* 노란색 배경 */
+            }
+
+            /* 웹킷 브라우저 전용 선택자 */
+            ::-webkit-selection {
+              background-color: #E7E7E7;
+            }
         </style>
     </head>
     <body>
-        <a href="iii.html" id="link"><p>← 기록과 선택</p></a>
+        <a href="index.html" id="link"><p>← 기록과 선택</p></a>
         <span id="left">
             <h2>Warm.Word.Wad.Web</h2>
-             <p id="subtitle">따뜻한 단어 뭉치 웹</p>
+             <p id="subtitle">따뜻한 단어뭉치 웹</p>
             <p id="name">이 레</p>
             <p id="description">기존에 보유한 기록물 중 일부 선택된 언어들이 시각적으로 구현된 것을 모은 아카이브 웹사이트다. 소중한 인연으로부터 받은 3개의 편지 중 선택된 일곱 가지의 단어뭉치가 다양한 방식으로 해석된 형태를 볼 수 있다.</p>
         </span>

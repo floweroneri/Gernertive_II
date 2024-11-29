@@ -96,20 +96,33 @@
 
             }
             iframe::-webkit-scrollbar {
-             display: none;
+             display: none;}
+           a {
+                text-decoration: none;
+                color: black;
+            }
+            ::selection {
+              background-color: #E7E7E7; /* 노란색 배경 */
+            }
+
+            /* 웹킷 브라우저 전용 선택자 */
+            ::-webkit-selection {
+              background-color: #E7E7E7;
+            }
         </style>
     </head>
     <body>
-        <a href="iii.html" id="link"><p>← 기록과 선택</p></a>
+        <a href="index.html" id="link"><p>← 기록과 선택</p></a>
         <span id="left">
-            <h2>영문명</h2>
-             <p id="subtitle">한글제목</p>
+            <h2>달걀 던지자</h2>
+             <!-- <p id="subtitle">한글제목</p> -->
             <p id="name">오현유</p>
-            <p id="description">ddd</p>
+            <p id="description">달걀 던지자 게임은 비난에 대한 태도를 간단한 방식으로 재구성한 게임입니다.
+            카메라 화면을 바탕으로 자신이 생각하는 비난받아 마땅한 사람을 기입합니다.  달걀을 열심히 던집니다. 달걀을 맞는 사람은 열심히 피해보지만 결국 달걀을 맞게 됩니다. 캡처한 화면을 바탕으로 누군가를 비난함은 결국 자신을 향해 돌아오고 있음을 기록해줍니다. 이게 나쁜지 좋은지는 자신이 선택하면 됩니다.</p>
         </span>
         <span id="right">
             <div class="iframe-container">
-                <iframe src="https://johndecember.com" frameborder="0"></iframe>
+                <iframe src="https://problemgirl.github.io/heonyu/" frameborder="0"></iframe>
             </div>
         </span>
         <script>

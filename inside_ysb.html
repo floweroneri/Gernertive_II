@@ -96,19 +96,32 @@
             }
             iframe::-webkit-scrollbar {
              display: none;
+            }
+            #link {
+                text-decoration: none;
+                color: black;
+            }
+            ::selection {
+              background-color: #E7E7E7; /* 노란색 배경 */
+            }
+
+            /* 웹킷 브라우저 전용 선택자 */
+            ::-webkit-selection {
+              background-color: #E7E7E7;
+            }
         </style>
     </head>
     <body>
-        <a href="iii.html" id="link"><p>← 기록과 선택</p></a>
+        <a href="index.html" id="link"><p>← 기록과 선택</p></a>
         <span id="left">
-            <h2>영문명</h2>
-             <p id="subtitle">한글제목</p>
+            <h2>Document</h2>
+             <!-- <p id="subtitle">한글제목</p> -->
             <p id="name">양새봄</p>
-            <p id="description">ㅇㅇㅇ</p>
+            <!-- <p id="description">ㅇㅇㅇ</p> -->
         </span>
         <span id="right">
             <div class="iframe-container">
-                <iframe src="https://johndecember.com" frameborder="0"></iframe>
+                <iframe src="https://diddid33.github.io/yangyang/" frameborder="0"></iframe>
             </div>
         </span>
        <script>
